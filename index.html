@@ -171,36 +171,17 @@
   .paso p { font-size:.92rem; color:var(--suave); font-weight:300; }
 
   /* PRODUCTOS */
-  .grid-productos { display:grid; grid-template-columns:repeat(auto-fit,minmax(290px,1fr)); gap:1.6rem; }
-  .prod-card { border:1px solid var(--borde); border-radius:16px; padding:2rem; background:var(--superficie); transition:transform .2s,box-shadow .2s; display:flex; flex-direction:column; }
+  .grid-productos { display:grid; grid-template-columns:repeat(4,1fr); gap:1.4rem; }
+  @media (max-width:1100px) { .grid-productos { grid-template-columns:repeat(2,1fr); } }
+  @media (max-width:600px) { .grid-productos { grid-template-columns:1fr; } }
+  .prod-card { border:1px solid var(--borde); border-radius:16px; padding:1.6rem; background:var(--superficie); transition:transform .2s,box-shadow .2s; display:flex; flex-direction:column; }
   .prod-card:hover { transform:translateY(-4px); box-shadow:0 12px 40px var(--sombra); }
   .prod-badge { align-self:flex-start; background:var(--verde-claro); color:var(--verde); font-size:.75rem; font-weight:500; padding:.2rem .8rem; border-radius:50px; margin-bottom:1rem; }
   .prod-badge.azul { background:var(--azul-claro); color:var(--azul); }
   .prod-card h3 { font-family:'Fraunces',serif; font-size:1.3rem; font-weight:700; margin-bottom:.6rem; }
   .prod-card p { font-size:.92rem; color:var(--suave); line-height:1.65; font-weight:300; }
-  .prod-link { margin-top:1.1rem; color:var(--azul); font-weight:500; font-size:.92rem; text-decoration:none; }
+  .prod-link { margin-top:auto; padding-top:1rem; color:var(--azul); font-weight:500; font-size:.92rem; text-decoration:none; }
   .prod-link:hover { text-decoration:underline; }
-
-  .grid-proy { display:grid; grid-template-columns:repeat(4,1fr); gap:1.4rem; }
-  @media (max-width:1100px) { .grid-proy { grid-template-columns:repeat(2,1fr); } }
-  @media (max-width:600px) { .grid-proy { grid-template-columns:1fr; } }
-  .proy { background:var(--superficie); border:1px solid var(--borde); border-radius:16px; overflow:hidden; display:flex; flex-direction:column; transition:transform .2s,box-shadow .2s; }
-  .proy:hover { transform:translateY(-4px); box-shadow:0 12px 40px var(--sombra); }
-  .proy > img, .proy-mock { width:100%; height:auto; aspect-ratio:16/10; object-fit:cover; object-position:top left; border-bottom:1px solid var(--borde); }
-  .proy-mock { display:grid; place-items:center; align-content:center; gap:.4rem; }
-  .mock-qr { background:linear-gradient(135deg,var(--azul-claro),var(--verde-claro)); color:var(--verde); }
-  .mock-qr .sello { border:3px solid var(--verde); border-radius:50%; width:96px; height:96px; display:grid; place-items:center; font-family:'Fraunces',serif; font-weight:700; transform:rotate(-8deg); }
-  .mock-qr small { color:var(--azul); font-size:.75rem; letter-spacing:.5px; }
-  .mock-gym { background:linear-gradient(135deg,var(--verde-claro),var(--azul-claro)); color:var(--azul); }
-  .proy-cuerpo { padding:1.2rem 1.3rem 1.4rem; display:flex; flex-direction:column; flex:1; }
-  .proy-meta { display:flex; justify-content:space-between; align-items:center; gap:.5rem; margin-bottom:.7rem; }
-  .proy-meta .prod-badge { margin:0; }
-  .estado { font-size:.72rem; font-weight:600; color:var(--suave); display:inline-flex; align-items:center; gap:.35rem; }
-  .estado::before { content:''; width:7px; height:7px; border-radius:50%; background:var(--verde); }
-  .estado.prueba::before { background:#e0a321; } .estado.dev::before { background:var(--azul-medio); }
-  .proy h3 { font-family:'Fraunces',serif; font-size:1.15rem; margin-bottom:.45rem; }
-  .proy p { font-size:.9rem; color:var(--suave); font-weight:300; line-height:1.6; }
-  .proy .prod-link { margin-top:auto; padding-top:.9rem; }
 
   /* PROPÓSITO */
   .proposito { background:linear-gradient(135deg,var(--azul-claro) 0%,var(--verde-claro) 100%); padding:6rem 6%; }
@@ -274,7 +255,7 @@
     <ul>
       <li><a href="#servicios" data-k="nav1">Servicios</a></li>
       <li><a href="#como" data-k="nav2">Cómo trabajamos</a></li>
-      <li><a href="#productos" data-k="nav3">Proyectos</a></li>
+      <li><a href="#productos" data-k="nav3">Productos</a></li>
       <li><a href="#nosotros" data-k="nav4">Nosotros</a></li>
       <li><a href="#contacto" class="nav-cta" data-k="nav5">Hablemos</a></li>
     </ul>
@@ -376,76 +357,31 @@
 </section>
 
 <section class="bloque" id="productos">
-  <div class="tag v" data-k="prod_tag">Proyectos</div>
-  <h2 class="sec-titulo" data-k="prod_t">Algunas cosas<br>que ya construimos</h2>
-  <p class="sec-sub" data-k="prod_s">Sistemas, páginas y apps hechos para casos reales. Algunos ya se usan todos los días y otros están en prueba.</p>
-  <div class="grid-proy">
-    <article class="proy">
-      <img src="img/proj/comandera.webp" alt="Pantalla de pedidos de Comandera" width="800" height="500" loading="lazy">
-      <div class="proy-cuerpo">
-        <div class="proy-meta"><span class="prod-badge" data-k="r_gastro">Gastronomía</span><span class="estado ok" data-k="e_uso">En uso</span></div>
-        <h3>Comandera</h3>
-        <p data-k="pj1">Pedidos, caja y reportes para locales de comida. Funciona sin internet. Nació en una pizzería que perdía pedidos escritos en papel.</p>
-      </div>
+  <div class="tag v" data-k="prod_tag">Nuestros productos</div>
+  <h2 class="sec-titulo" data-k="prod_t">Soluciones que construimos<br>para casos reales</h2>
+  <p class="sec-sub" data-k="prod_s">Además de trabajos a medida, tenemos productos propios que se adaptan a cada negocio.</p>
+  <div class="grid-productos">
+    <article class="prod-card">
+      <span class="prod-badge" data-k="pr1b">Gastronomía</span>
+      <h3>Comandera</h3>
+      <p data-k="pr1p">Pedidos, caja y reportes para locales de comida. Funciona sin internet y se instala en el local. Nació en una pizzería que perdía pedidos escritos en papel.</p>
+      <a class="prod-link" href="comandera/" data-k="pr1l">Ver cómo funciona →</a>
     </article>
-    <article class="proy">
-      <img src="img/proj/osas.webp" alt="Panel del afiliado de una obra social" width="800" height="500" loading="lazy">
-      <div class="proy-cuerpo">
-        <div class="proy-meta"><span class="prod-badge azul" data-k="r_salud">Salud</span><span class="estado ok" data-k="e_uso">En uso</span></div>
-        <h3 data-k="pj2t">Gestión para una obra social</h3>
-        <p data-k="pj2">Turnos médicos online, historias clínicas, recordatorios por mail y comprobantes en PDF, con permisos distintos para cada rol.</p>
-        <a class="prod-link" href="https://osas.com.ar" target="_blank" rel="noopener" data-k="ver_sitio">Ver el sitio →</a>
-      </div>
+    <article class="prod-card">
+      <span class="prod-badge azul" data-k="pr4b">Kioscos y almacenes</span>
+      <h3 data-k="pr4t">Sistema para kioscos</h3>
+      <p data-k="pr4p">Ventas, stock y caja para kioscos, almacenes y comercios de barrio, con el logo y los datos de cada negocio.</p>
     </article>
-    <article class="proy">
-      <img src="img/proj/joyeria.webp" alt="Catálogo online de una joyería" width="800" height="500" loading="lazy">
-      <div class="proy-cuerpo">
-        <div class="proy-meta"><span class="prod-badge" data-k="r_comercio">Comercio</span><span class="estado ok" data-k="e_uso">En uso</span></div>
-        <h3>Joyería Ángel</h3>
-        <p data-k="pj3">Una joyería familiar que vendía solo por Instagram. Ahora tiene catálogo online con carrito que arma el pedido y lo manda por WhatsApp.</p>
-        <a class="prod-link" href="https://joyeria-angel-925.web.app/" target="_blank" rel="noopener" data-k="ver_tienda">Ver la tienda →</a>
-      </div>
+    <article class="prod-card">
+      <span class="prod-badge" data-k="pr2b">Gimnasios</span>
+      <h3 data-k="pr2t">Sistema para gimnasios</h3>
+      <p data-k="pr2p">Acceso con llavero, socios y cuotas para gimnasios de barrio. Simple e instalado en el local.</p>
     </article>
-    <article class="proy">
-      <img src="img/proj/agendadoc.webp" alt="Panel de cursos de AgendaDoc" width="800" height="500" loading="lazy">
-      <div class="proy-cuerpo">
-        <div class="proy-meta"><span class="prod-badge azul" data-k="r_edu">Educación</span><span class="estado ok" data-k="e_hecho">Terminado</span></div>
-        <h3>AgendaDoc</h3>
-        <p data-k="pj4">Agenda digital para docentes e instituciones: cursos, horarios, alumnos y notas, con planillas listas para imprimir.</p>
-      </div>
-    </article>
-    <article class="proy">
-      <div class="proy-mock mock-qr" aria-hidden="true"><div class="sello">VÁLIDA</div><small>CONST-2026-00001</small></div>
-      <div class="proy-cuerpo">
-        <div class="proy-meta"><span class="prod-badge azul" data-k="r_edu">Educación</span><span class="estado prueba" data-k="e_prueba">En prueba</span></div>
-        <h3 data-k="pj5t">Constancias con QR</h3>
-        <p data-k="pj5">Constancias digitales para institutos: secretaría las prepara, las autoridades firman con un clic y cualquiera verifica si son reales escaneando el QR.</p>
-      </div>
-    </article>
-    <article class="proy">
-      <img src="img/proj/salon.webp" alt="Plataforma Salón para agencias de eventos" width="800" height="500" loading="lazy">
-      <div class="proy-cuerpo">
-        <div class="proy-meta"><span class="prod-badge" data-k="r_eventos">Eventos</span><span class="estado dev" data-k="e_dev">En desarrollo</span></div>
-        <h3>Salón</h3>
-        <p data-k="pj6">Para agencias de eventos: salones en un mapa, reservas online, invitados, mesas en un plano y presupuesto del catering.</p>
-      </div>
-    </article>
-    <article class="proy">
-      <div class="proy-mock mock-gym" aria-hidden="true"><svg viewBox="0 0 24 24" width="64" height="64" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M6 7v10M3 9v6M18 7v10M21 9v6M6 12h12"/></svg></div>
-      <div class="proy-cuerpo">
-        <div class="proy-meta"><span class="prod-badge" data-k="r_gym">Gimnasios</span><span class="estado dev" data-k="e_dev">En desarrollo</span></div>
-        <h3 data-k="pj7t">Sistema para gimnasios</h3>
-        <p data-k="pj7">Acceso con llavero, socios y cuotas para gimnasios de barrio. Simple e instalado en el local.</p>
-      </div>
-    </article>
-    <article class="proy">
-      <img src="img/bp/01-portada.webp" alt="Portada del juego Brigada Píxel" width="1280" height="720" loading="lazy" style="image-rendering:pixelated">
-      <div class="proy-cuerpo">
-        <div class="proy-meta"><span class="prod-badge azul" data-k="r_juego">Juego Android</span><span class="estado prueba" data-k="e_prueba">En prueba</span></div>
-        <h3>Brigada Píxel</h3>
-        <p data-k="pj8">Nuestro primer juego: plataformas 8-bit en el espacio, con robots, bombas y 5 jefes. Muy pronto en Google Play.</p>
-        <a class="prod-link" href="brigada-pixel/" data-k="pr3l">Conocer el juego →</a>
-      </div>
+    <article class="prod-card">
+      <span class="prod-badge azul" data-k="pr3b">Juego para Android</span>
+      <h3>Brigada Píxel</h3>
+      <p data-k="pr3p">Juego de plataformas 8-bit en el espacio, con robots, bombas y 5 jefes. Nuestro primer juego, muy pronto en Google Play.</p>
+      <a class="prod-link" href="brigada-pixel/" data-k="pr3l">Conocer el juego →</a>
     </article>
   </div>
 </section>
@@ -505,6 +441,7 @@
     <a href="https://www.instagram.com/vinkko.ar" target="_blank" rel="noopener">Instagram</a>
     <a href="https://www.linkedin.com/company/vinkko" target="_blank" rel="noopener">LinkedIn</a>
     <a href="https://wa.me/5491131579295" target="_blank" rel="noopener">WhatsApp</a>
+    <a href="comandera/">Comandera</a>
     <a href="brigada-pixel/">Brigada Píxel</a>
   </div>
 </footer>
@@ -516,7 +453,7 @@
 <script>
 (function () {
   var EN = {
-    skip:'Skip to content', nav1:'Services', nav2:'How we work', nav3:'Projects', nav4:'About us', nav5:"Let's talk",
+    skip:'Skip to content', nav1:'Services', nav2:'How we work', nav3:'Products', nav4:'About us', nav5:"Let's talk",
     badge:'Technology made by families, for families',
     h1:'Your business grows.<br><em>Your family</em> does too<strong>.</strong>',
     hero_p:'At Vinkko we build management systems, websites, apps and automations for small businesses of any kind. First we understand how your business works, then we propose something simple that your team will actually use.',
@@ -532,17 +469,11 @@
     p2t:'We propose', p2p:'What we would build, what it costs and how long it takes. No fine print.',
     p3t:'We build', p3p:'We show you progress and adjust with you.',
     p4t:'We install and stay', p4p:'We teach you how to use it and we\'re still there if something fails or you need a change.',
-    prod_tag:'Projects', prod_t:'Some things<br>we have already built', prod_s:'Systems, websites and apps made for real cases. Some are used every day and others are in testing.',
-    r_gastro:'Restaurants', r_salud:'Health', r_comercio:'Retail', r_edu:'Education', r_eventos:'Events', r_gym:'Gyms', r_juego:'Android game',
-    e_uso:'In use', e_hecho:'Finished', e_prueba:'In testing', e_dev:'In development', ver_sitio:'See the site →', ver_tienda:'See the store →',
-    pj1:'Orders, cash register and reports for food businesses. Works offline. It was born in a pizzeria that kept losing orders written on paper.',
-    pj2t:'Health insurance management', pj2:'Online medical appointments, clinical records, email reminders and PDF receipts, with different permissions for each role.',
-    pj3:'A family jewelry business that only sold on Instagram. Now it has an online catalog with a cart that builds the order and sends it via WhatsApp.',
-    pj4:'Digital planner for teachers and schools: courses, schedules, students and grades, with sheets ready to print.',
-    pj5t:'QR-verified certificates', pj5:'Digital certificates for colleges: the office prepares them, authorities sign with one click and anyone can check they are real by scanning the QR code.',
-    pj6:'For event agencies: venues on a map, online bookings, guests, tables on a floor plan and catering budget.',
-    pj7t:'Gym management system', pj7:'Key-fob access, members and fees for neighborhood gyms. Simple and installed on site.',
-    pj8:'Our first game: an 8-bit space platformer with robots, bombs and 5 bosses. Coming soon to Google Play.', pr3l:'Discover the game →',
+    prod_tag:'Our products', prod_t:'Solutions we built<br>for real cases', prod_s:'Besides custom work, we have our own products that adapt to each business.',
+    pr1b:'Restaurants', pr1p:'Orders, cash register and reports for food businesses. Works offline and is installed on site. It was born in a pizzeria that kept losing orders written on paper.', pr1l:'See how it works →',
+    pr4b:'Corner shops', pr4t:'System for corner shops', pr4p:'Sales, stock and cash register for corner shops, grocery stores and neighborhood businesses, with each business\'s logo and details.',
+    pr2b:'Gyms', pr2t:'Gym management system', pr2p:'Key-fob access, members and fees for neighborhood gyms. Simple and installed on site.',
+    pr3b:'Android game', pr3p:'An 8-bit space platformer with robots, bombs and 5 bosses. Our first game, coming soon to Google Play.', pr3l:'Discover the game →',
     nos_tag:'Our story', nos_t:'Made by families,<br>so you can grow<br>without losing what matters.',
     nos_p1:'Vinkko was born from an idea that seems obvious to us, yet is rarely seen: that work and family can go together.',
     nos_p2:'Anyone who supports a family knows what time is worth. That\'s why we build technology that takes work off your plate instead of adding to it.',

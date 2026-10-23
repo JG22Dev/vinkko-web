@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Comandera | Pedidos, caja y reportes para locales de comida · Vinkko</title>
+<meta name="description" content="Comandera es el sistema de Vinkko para locales de comida: pedidos, caja y reportes en una sola pantalla. Se instala en el local y funciona sin internet.">
+<link rel="canonical" href="https://vinkko.com.ar/comandera/">
+<meta name="theme-color" content="#2A7DB5">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Vinkko">
+<meta property="og:locale" content="es_AR">
+<meta property="og:url" content="https://vinkko.com.ar/comandera/">
+<meta property="og:title" content="Comandera: pedidos, caja y reportes para locales de comida">
+<meta property="og:description" content="Todos los pedidos del turno en una pantalla. Funciona sin internet y se instala en el local.">
+<meta property="og:image" content="https://vinkko.com.ar/img/com/01-comandera.webp">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" type="image/png" sizes="32x32" href="../img/favicon-32.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@600;700&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Comandera",
+  "url": "https://vinkko.com.ar/comandera/",
+  "description": "Sistema de pedidos, caja y reportes para locales de comida. Se instala en el local y funciona sin internet.",
+  "applicationCategory": "BusinessApplication",
+  "operatingSystem": "Windows",
+  "inLanguage": "es",
+  "image": "https://vinkko.com.ar/img/com/01-comandera.webp",
+  "publisher": {"@type": "Organization", "name": "Vinkko", "url": "https://vinkko.com.ar/"}
+}
+</script>
+<style>
+  :root { --azul:#2A7DB5; --azul-claro:#E8F4FC; --verde:#3A9E6E; --verde-claro:#E6F5EE; --fondo:#F7FBFA; --sup:#FFFFFF; --texto:#1A2E2A; --suave:#4A6B60; --borde:#D4EBE0; --sombra:rgba(42,125,181,.12); color-scheme:light; }
+  [data-theme="dark"] { --azul:#6BB3E6; --azul-claro:#16283a; --verde:#5CC795; --verde-claro:#14302a; --fondo:#0f1a18; --sup:#16231f; --texto:#E6F0EC; --suave:#A7C2B8; --borde:#24372f; --sombra:rgba(0,0,0,.35); color-scheme:dark; }
+  * { box-sizing:border-box; margin:0; padding:0; }
+  body { font-family:'DM Sans',sans-serif; background:var(--fondo); color:var(--texto); line-height:1.6; }
+  a { color:var(--azul); }
+  img { max-width:100%; height:auto; display:block; }
+  .top { max-width:1080px; margin:0 auto; padding:18px 20px; display:flex; justify-content:space-between; align-items:center; gap:12px; flex-wrap:wrap; }
+  .top a { text-decoration:none; font-weight:500; }
+  .marca { display:flex; align-items:center; gap:8px; font-family:'Fraunces',serif; font-size:1.3rem; font-weight:700; color:var(--azul) !important; }
+  .marca span span { color:var(--verde); }
+  .marca img { height:34px; }
+  [data-theme="dark"] .marca img { background:#fff; border-radius:8px; padding:2px; }
+  .hero { max-width:1080px; margin:0 auto; padding:30px 20px 50px; display:grid; grid-template-columns:1fr 1.3fr; gap:40px; align-items:center; }
+  .badge { display:inline-block; background:var(--verde-claro); color:var(--verde); font-size:.82rem; font-weight:500; padding:.3rem .9rem; border-radius:50px; margin-bottom:14px; }
+  h1 { font-family:'Fraunces',serif; font-size:3rem; line-height:1.1; margin-bottom:14px; letter-spacing:-.5px; }
+  .hero p { color:var(--suave); margin-bottom:20px; font-weight:300; font-size:1.05rem; }
+  .acciones { display:flex; gap:10px; flex-wrap:wrap; }
+  .btn { display:inline-flex; align-items:center; background:var(--azul); color:#fff; font-weight:500; text-decoration:none; padding:.8rem 1.6rem; border-radius:50px; box-shadow:0 4px 20px var(--sombra); }
+  .btn:hover { background:var(--verde); }
+  .btn.sec { background:transparent; color:var(--azul); border:1.5px solid var(--azul); box-shadow:none; }
+  .hero-img { border-radius:14px; border:1px solid var(--borde); box-shadow:0 20px 60px var(--sombra); }
+  section { max-width:1080px; margin:0 auto; padding:40px 20px; }
+  h2 { font-family:'Fraunces',serif; font-size:1.7rem; margin-bottom:18px; }
+  .rasgos { display:grid; grid-template-columns:repeat(auto-fit,minmax(230px,1fr)); gap:14px; }
+  .rasgo { background:var(--sup); border:1px solid var(--borde); border-radius:14px; padding:18px; }
+  .rasgo b { display:block; color:var(--azul); margin-bottom:4px; }
+  .rasgo span { color:var(--suave); font-size:.95rem; font-weight:300; }
+  .galeria { display:grid; grid-template-columns:repeat(auto-fit,minmax(300px,1fr)); gap:14px; }
+  figure { background:var(--sup); border:1px solid var(--borde); border-radius:14px; overflow:hidden; }
+  figure img { width:100%; height:auto; }
+  figcaption { padding:10px 14px; font-size:.9rem; color:var(--suave); }
+  .nota { color:var(--suave); font-size:.88rem; margin-top:14px; }
+  footer { text-align:center; color:var(--suave); font-size:.88rem; padding:40px 20px 50px; border-top:1px solid var(--borde); margin-top:30px; }
+  @media (max-width:820px) { .hero { grid-template-columns:1fr; } h1 { font-size:2.3rem; } }
+</style>
+<script>
+  (function(){ try { var t = localStorage.getItem('vk-tema'); if (!t) t = matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'; document.documentElement.setAttribute('data-theme', t); } catch(e){} })();
+</script>
+</head>
+<body>
+<div class="top">
+  <a href="../" class="marca"><img src="../img/logo.webp" alt="Vinkko" width="39" height="34"><span>Vink<span>ko</span></span></a>
+  <a href="../#contacto">Contacto</a>
+</div>
+
+<main>
+<div class="hero">
+  <div>
+    <span class="badge">Para locales de comida</span>
+    <h1>Comandera</h1>
+    <p>Pedidos, caja y reportes en una sola pantalla. Se instala en la computadora del local y funciona sin internet.</p>
+    <p>Nació en una pizzería que tomaba los pedidos en papel y los perdía. Hoy cada pedido queda cargado, con el tiempo de espera a la vista, y la caja se cierra sabiendo cuánto tiene que haber.</p>
+    <div class="acciones">
+      <a class="btn" href="https://wa.me/5491131579295?text=Hola%20Vinkko%2C%20quiero%20ver%20la%20Comandera%20funcionando" target="_blank" rel="noopener">Quiero verla funcionando</a>
+      <a class="btn sec" href="../">Volver a Vinkko</a>
+    </div>
+  </div>
+  <img class="hero-img" src="../img/com/01-comandera.webp" alt="Pantalla principal de la Comandera con los pedidos del turno" width="1440" height="900">
+</div>
+
+<section>
+  <h2>Qué resuelve</h2>
+  <div class="rasgos">
+    <div class="rasgo"><b>Todos los pedidos a la vista</b><span>Los del turno en una pantalla, ordenados por estado y con el tiempo de espera de cada uno.</span></div>
+    <div class="rasgo"><b>Clientes que vuelven</b><span>Con el teléfono aparecen sus datos y su última dirección. Una pizza mitad y mitad sale en dos clics.</span></div>
+    <div class="rasgo"><b>Caja que cierra</b><span>El arqueo muestra cuánta plata debería haber y por qué. Reportes en PDF y Excel.</span></div>
+    <div class="rasgo"><b>Sin depender de internet</b><span>Funciona en el local, con ingreso por PIN para cada persona y ticketera térmica.</span></div>
+  </div>
+</section>
+
+<section>
+  <h2>Así se ve</h2>
+  <div class="galeria">
+    <figure><img src="../img/com/02-nuevo-pedido.webp" alt="Carga de un pedido nuevo" width="1440" height="900" loading="lazy"><figcaption>Carga de un pedido con los datos del cliente</figcaption></figure>
+    <figure><img src="../img/com/03-caja-y-arqueo.webp" alt="Caja y arqueo" width="1440" height="900" loading="lazy"><figcaption>Caja y arqueo: cuánto debería haber y cómo se llega a ese número</figcaption></figure>
+    <figure><img src="../img/com/04-reportes.webp" alt="Reportes de ventas" width="1440" height="900" loading="lazy"><figcaption>Reportes: ventas, ticket promedio, demora y qué se vendió</figcaption></figure>
+    <figure><img src="../img/com/05-productos-y-precios.webp" alt="Productos y precios" width="1440" height="900" loading="lazy"><figcaption>Productos y precios por tamaño, con agregados</figcaption></figure>
+    <figure><img src="../img/com/07-historial.webp" alt="Historial de pedidos" width="1440" height="900" loading="lazy"><figcaption>Historial con filtros por fecha, estado, canal y pago</figcaption></figure>
+  </div>
+  <p class="nota">Las capturas usan un local de demostración.</p>
+</section>
+</main>
+
+<footer>© 2026 Vinkko · <a href="../">vinkko.com.ar</a> · Hecho en Argentina</footer>
+</body>
+</html>
