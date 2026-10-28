@@ -171,7 +171,7 @@
   .paso p { font-size:.92rem; color:var(--suave); font-weight:300; }
 
   /* PRODUCTOS */
-  .grid-productos { display:grid; grid-template-columns:repeat(4,1fr); gap:1.4rem; }
+  .grid-productos { display:grid; grid-template-columns:repeat(3,1fr); gap:1.4rem; }
   @media (max-width:1100px) { .grid-productos { grid-template-columns:repeat(2,1fr); } }
   @media (max-width:600px) { .grid-productos { grid-template-columns:1fr; } }
   .prod-card { border:1px solid var(--borde); border-radius:16px; padding:1.6rem; background:var(--superficie); transition:transform .2s,box-shadow .2s; display:flex; flex-direction:column; }
@@ -255,7 +255,7 @@
     <ul>
       <li><a href="#servicios" data-k="nav1">Servicios</a></li>
       <li><a href="#como" data-k="nav2">Cómo trabajamos</a></li>
-      <li><a href="#productos" data-k="nav3">Productos</a></li>
+      <li><a href="#productos" data-k="nav3">Lo que hacemos</a></li>
       <li><a href="#nosotros" data-k="nav4">Nosotros</a></li>
       <li><a href="#contacto" class="nav-cta" data-k="nav5">Hablemos</a></li>
     </ul>
@@ -357,15 +357,21 @@
 </section>
 
 <section class="bloque" id="productos">
-  <div class="tag v" data-k="prod_tag">Nuestros productos</div>
-  <h2 class="sec-titulo" data-k="prod_t">Soluciones que construimos<br>para casos reales</h2>
-  <p class="sec-sub" data-k="prod_s">Además de trabajos a medida, tenemos productos propios que se adaptan a cada negocio.</p>
+  <div class="tag v" data-k="prod_tag">Lo que construimos</div>
+  <h2 class="sec-titulo" data-k="prod_t">Algunas soluciones<br>que construimos</h2>
+  <p class="sec-sub" data-k="prod_s">Trabajos para negocios reales y productos propios que se adaptan a cada uno.</p>
   <div class="grid-productos">
     <article class="prod-card">
-      <span class="prod-badge" data-k="pr1b">Gastronomía</span>
+      <span class="prod-badge azul" data-k="cl2b">Comercio</span>
+      <h3>Joyería Ángel</h3>
+      <p data-k="cl2p">Una joyería familiar que vendía solo por Instagram. Ahora tiene una tienda online con catálogo, un carrito que arma el pedido por WhatsApp y un panel para cargar sus piezas.</p>
+      <a class="prod-link" href="https://joyeria-angel-925.web.app/" target="_blank" rel="noopener" data-k="cl2l">Ver la tienda →</a>
+    </article>
+    <article class="prod-card">
+      <span class="prod-badge" data-k="cl1b">Gastronomía</span>
       <h3>Comandera</h3>
-      <p data-k="pr1p">Pedidos, caja y reportes para locales de comida. Funciona sin internet y se instala en el local. Nació en una pizzería que perdía pedidos escritos en papel.</p>
-      <a class="prod-link" href="comandera/" data-k="pr1l">Ver cómo funciona →</a>
+      <p data-k="cl1p">Una pizzería que perdía pedidos anotados en papel. Le hicimos un sistema de pedidos, caja y reportes que funciona sin internet.</p>
+      <a class="prod-link" href="comandera/" data-k="cl1l">Ver cómo funciona →</a>
     </article>
     <article class="prod-card">
       <span class="prod-badge azul" data-k="pr4b">Kioscos y almacenes</span>
@@ -453,7 +459,7 @@
 <script>
 (function () {
   var EN = {
-    skip:'Skip to content', nav1:'Services', nav2:'How we work', nav3:'Products', nav4:'About us', nav5:"Let's talk",
+    skip:'Skip to content', nav1:'Services', nav2:'How we work', nav3:'Our work', nav4:'About us', nav5:"Let's talk",
     badge:'Technology made by families, for families',
     h1:'Your business grows.<br><em>Your family</em> does too<strong>.</strong>',
     hero_p:'At Vinkko we build management systems, websites, apps and automations for small businesses of any kind. First we understand how your business works, then we propose something simple that your team will actually use.',
@@ -469,8 +475,9 @@
     p2t:'We propose', p2p:'What we would build, what it costs and how long it takes. No fine print.',
     p3t:'We build', p3p:'We show you progress and adjust with you.',
     p4t:'We install and stay', p4p:'We teach you how to use it and we\'re still there if something fails or you need a change.',
-    prod_tag:'Our products', prod_t:'Solutions we built<br>for real cases', prod_s:'Besides custom work, we have our own products that adapt to each business.',
-    pr1b:'Restaurants', pr1p:'Orders, cash register and reports for food businesses. Works offline and is installed on site. It was born in a pizzeria that kept losing orders written on paper.', pr1l:'See how it works →',
+    prod_tag:'What we built', prod_t:'Some solutions<br>we have built', prod_s:'Work for real businesses and our own products that adapt to each one.',
+    cl1b:'Restaurants', cl1p:'A pizzeria that kept losing orders written on paper. We built an order, cash register and reporting system that works offline.', cl1l:'See how it works →',
+    cl2b:'Retail', cl2p:'A family jewelry business that only sold on Instagram. Now it has an online store with a catalog, a cart that sends the order via WhatsApp and a panel to upload its pieces.', cl2l:'See the store →',
     pr4b:'Corner shops', pr4t:'System for corner shops', pr4p:'Sales, stock and cash register for corner shops, grocery stores and neighborhood businesses, with each business\'s logo and details.',
     pr2b:'Gyms', pr2t:'Gym management system', pr2p:'Key-fob access, members and fees for neighborhood gyms. Simple and installed on site.',
     pr3b:'Android game', pr3p:'An 8-bit space platformer with robots, bombs and 5 bosses. Our first game, coming soon to Google Play.', pr3l:'Discover the game →',
