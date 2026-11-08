@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Brigada Píxel | Juego de plataformas 8-bit para Android · Vinkko</title>
-<meta name="description" content="Brigada Píxel es un juego de plataformas 8-bit en el espacio para Android: robots, bombas, estaciones orbitales y 5 jefes. Gratis, hecho por Vinkko. Disponible en Google Play.">
+<meta name="description" content="Brigada Píxel (Brigada Pixel) es un juego de plataformas 8-bit gratis para Android: 50 niveles en el espacio, 5 jefes, robots, bombas y ranking mundial. Hecho por Vinkko, en español e inglés.">
 <link rel="canonical" href="https://vinkko.com.ar/brigada-pixel/">
 <meta name="theme-color" content="#0e1322">
 <meta property="og:type" content="website">
@@ -12,7 +12,7 @@
 <meta property="og:locale" content="es_AR">
 <meta property="og:url" content="https://vinkko.com.ar/brigada-pixel/">
 <meta property="og:title" content="Brigada Píxel, juego 8-bit para Android">
-<meta property="og:description" content="Plataformas en el espacio, robots, bombas y 5 jefes. Gratis en Google Play.">
+<meta property="og:description" content="50 niveles de plataformas en el espacio, 5 jefes y ranking mundial. Gratis en Google Play.">
 <meta property="og:image" content="https://vinkko.com.ar/img/bp/01-portada.webp">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" type="image/png" sizes="32x32" href="../img/favicon-32.png">
@@ -21,18 +21,44 @@
   "@context": "https://schema.org",
   "@type": "VideoGame",
   "name": "Brigada Píxel",
+  "alternateName": "Brigada Pixel",
   "url": "https://vinkko.com.ar/brigada-pixel/",
-  "description": "Juego de plataformas 8-bit en el espacio, con robots, bombas, estaciones orbitales y 5 jefes.",
-  "genre": ["Plataformas", "Acción", "Retro"],
+  "description": "Juego de plataformas 8-bit gratis para Android: 50 niveles en el espacio, 5 jefes, robots, bombas, modo infinito y ranking mundial con Google Play Juegos.",
+  "genre": ["Plataformas", "Acción", "Arcade", "Retro"],
   "gamePlatform": "Android",
-  "operatingSystem": "Android",
+  "operatingSystem": "Android 7.0 o superior",
   "applicationCategory": "Game",
+  "playMode": "SinglePlayer",
   "inLanguage": ["es", "en"],
   "image": "https://vinkko.com.ar/img/bp/01-portada.webp",
   "offers": {"@type": "Offer", "price": "0", "priceCurrency": "ARS"},
   "installUrl": "https://play.google.com/store/apps/details?id=ar.vinkko.brigadapixel",
-  "sameAs": ["https://play.google.com/store/apps/details?id=ar.vinkko.brigadapixel"],
+  "sameAs": ["https://play.google.com/store/apps/details?id=ar.vinkko.brigadapixel", "https://www.youtube.com/watch?v=nXSOXuOlYJ8"],
+  "trailer": {
+    "@type": "VideoObject",
+    "name": "Brigada Píxel · Tráiler",
+    "description": "Tráiler de Brigada Píxel, juego de plataformas 8-bit para Android.",
+    "thumbnailUrl": "https://i.ytimg.com/vi/nXSOXuOlYJ8/hqdefault.jpg",
+    "uploadDate": "2026-11-08",
+    "embedUrl": "https://www.youtube-nocookie.com/embed/nXSOXuOlYJ8",
+    "contentUrl": "https://www.youtube.com/watch?v=nXSOXuOlYJ8"
+  },
+  "author": {"@type": "Organization", "name": "Vinkko", "url": "https://vinkko.com.ar/"},
   "publisher": {"@type": "Organization", "name": "Vinkko", "url": "https://vinkko.com.ar/"}
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {"@type": "Question", "name": "¿Brigada Píxel es gratis?", "acceptedAnswer": {"@type": "Answer", "text": "Sí. Se descarga gratis desde Google Play. Tiene anuncios y compras opcionales, por ejemplo para quitar los anuncios, pero se puede jugar completo sin pagar."}},
+    {"@type": "Question", "name": "¿En qué celulares funciona?", "acceptedAnswer": {"@type": "Answer", "text": "En celulares y tablets Android con Android 7.0 o superior."}},
+    {"@type": "Question", "name": "¿Se puede jugar sin internet?", "acceptedAnswer": {"@type": "Answer", "text": "Sí, los niveles se juegan sin conexión. El ranking mundial y los logros de Google Play Juegos necesitan internet para actualizarse."}},
+    {"@type": "Question", "name": "¿Hay versión para PC?", "acceptedAnswer": {"@type": "Answer", "text": "Estamos preparando la versión para Google Play Juegos para PC, para jugar con teclado o mando."}},
+    {"@type": "Question", "name": "¿Está en inglés?", "acceptedAnswer": {"@type": "Answer", "text": "Sí. El juego está en español y en inglés, y se cambia desde la portada, en el botón IDIOMA."}},
+    {"@type": "Question", "name": "¿Cómo funciona el ranking?", "acceptedAnswer": {"@type": "Answer", "text": "Con Google Play Juegos. En Logros → Ranking ves el top 25 del mundo o de tus amigos, en dos tablas: nivel máximo y puntaje."}}
+  ]
 }
 </script>
 <style>
@@ -62,6 +88,11 @@
   figure { background:var(--sup); border:1px solid var(--borde); border-radius:12px; overflow:hidden; }
   figure img { image-rendering:pixelated; width:100%; height:auto; }
   figcaption { padding:10px 14px; font-size:.9rem; color:var(--suave); }
+  .video { position:relative; aspect-ratio:16/9; border-radius:14px; overflow:hidden; border:2px solid var(--borde); background:#000; }
+  .video iframe { position:absolute; inset:0; width:100%; height:100%; border:0; }
+  details { background:var(--sup); border:1px solid var(--borde); border-radius:12px; padding:14px 18px; margin-bottom:10px; }
+  summary { cursor:pointer; font-weight:700; color:var(--texto); }
+  details p { color:var(--suave); margin-top:8px; }
   .legales { display:flex; gap:18px; flex-wrap:wrap; }
   footer { text-align:center; color:#7f89b8; font-size:.88rem; padding:40px 20px 50px; border-top:1px solid var(--borde); margin-top:30px; }
   @media (max-width:820px) { .hero { grid-template-columns:1fr; } h1 { font-size:2.3rem; } }
@@ -78,8 +109,8 @@
   <div>
     <span class="estado">Disponible en Google Play</span>
     <h1>Brigada Píxel</h1>
-    <p>Un juego de plataformas 8-bit en el espacio. Saltás entre estaciones orbitales, esquivás robots, ponés bombas y enfrentás a 5 jefes. Gratis para Android, con controles que podés acomodar a tu gusto.</p>
-    <p>Ya está disponible gratis en Google Play. Si lo jugás, contanos qué te pareció: leemos todas las reseñas.</p>
+    <p>Nuestro primer juego: plataformas 8-bit en el espacio. Saltás entre estaciones orbitales, esquivás robots, ponés bombas y enfrentás a 5 jefes a lo largo de 50 niveles. Y con el ranking mundial, podés ver quién llega más lejos.</p>
+    <p>Gratis para Android, en español e inglés. Si lo jugás, contanos qué te pareció: leemos todas las reseñas.</p>
     <div class="acciones"><a class="btn" href="https://play.google.com/store/apps/details?id=ar.vinkko.brigadapixel" target="_blank" rel="noopener">Descargar en Google Play</a>
     <a class="btn sec" href="https://www.instagram.com/vinkko.ar" target="_blank" rel="noopener">Seguinos en Instagram</a></div>
   </div>
@@ -89,11 +120,18 @@
 <section>
   <h2>Qué vas a encontrar</h2>
   <div class="rasgos">
-    <div class="rasgo"><b>Estilo 8-bit</b><span>Gráficos y música retro, hechos desde cero.</span></div>
-    <div class="rasgo"><b>5 jefes</b><span>Cada zona termina con un jefe distinto.</span></div>
-    <div class="rasgo"><b>Varios personajes</b><span>Elegís con quién jugar y desbloqueás aspectos.</span></div>
-    <div class="rasgo"><b>Controles a medida</b><span>Mové y agrandá los botones en pantalla.</span></div>
+    <div class="rasgo"><b>50 niveles y 5 jefes</b><span>Cinco mundos: estación orbital, planeta rojo, fábrica de robots, cometa de cristal y el núcleo de un reactor. Después, modo infinito.</span></div>
+    <div class="rasgo"><b>Ranking mundial</b><span>Compará tu nivel y tu puntaje con jugadores de todo el mundo o con tus amigos de Google Play Juegos.</span></div>
+    <div class="rasgo"><b>4 personajes</b><span>Bit, Kira, Ursus y Pólvora, cada uno con su habilidad. Además, 18 aspectos y 26 logros.</span></div>
+    <div class="rasgo"><b>Estilo 8-bit</b><span>Gráficos y música chiptune originales, hechos desde cero.</span></div>
+    <div class="rasgo"><b>Controles a medida</b><span>Modo clásico o simple, y botones que podés mover y agrandar.</span></div>
+    <div class="rasgo"><b>Español e inglés</b><span>Elegís el idioma desde la portada del juego.</span></div>
   </div>
+</section>
+
+<section>
+  <h2>Mirá el tráiler</h2>
+  <div class="video"><iframe src="https://www.youtube-nocookie.com/embed/nXSOXuOlYJ8" title="Tráiler de Brigada Píxel" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
 </section>
 
 <section>
@@ -108,11 +146,23 @@
 </section>
 
 <section>
+  <h2>Preguntas frecuentes</h2>
+  <details><summary>¿Brigada Píxel es gratis?</summary><p>Sí. Se descarga gratis desde Google Play. Tiene anuncios y compras opcionales, por ejemplo para quitar los anuncios, pero se puede jugar completo sin pagar.</p></details>
+  <details><summary>¿En qué celulares funciona?</summary><p>En celulares y tablets Android con Android 7.0 o superior.</p></details>
+  <details><summary>¿Se puede jugar sin internet?</summary><p>Sí, los niveles se juegan sin conexión. El ranking mundial y los logros de Google Play Juegos necesitan internet para actualizarse.</p></details>
+  <details><summary>¿Hay versión para PC?</summary><p>Estamos preparando la versión para Google Play Juegos para PC, para jugar con teclado o mando.</p></details>
+  <details><summary>¿Está en inglés?</summary><p>Sí. El juego está en español y en inglés, y se cambia desde la portada, en el botón IDIOMA.</p></details>
+  <details><summary>¿Cómo funciona el ranking?</summary><p>Con Google Play Juegos. En Logros → Ranking ves el top 25 del mundo o de tus amigos, en dos tablas: nivel máximo y puntaje.</p></details>
+  <p style="color:var(--suave);margin-top:14px;font-size:.95rem">Lo vas a encontrar como <b>Brigada Píxel</b> o <b>Brigada Pixel</b>: es el mismo juego.</p>
+</section>
+
+<section>
   <h2>Legales y soporte</h2>
   <div class="legales">
     <a href="privacidad/">Política de privacidad</a>
     <a href="terminos/">Términos y condiciones</a>
     <a href="mailto:vinkkoar@gmail.com?subject=Brigada%20P%C3%ADxel">Soporte: vinkkoar@gmail.com</a>
+    <a href="https://www.youtube.com/watch?v=nXSOXuOlYJ8" target="_blank" rel="noopener">Tráiler en YouTube</a>
   </div>
 </section>
 </main>
