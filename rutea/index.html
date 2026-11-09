@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Rutea | App de reparto para logística de última milla · Vinkko</title>
+<meta name="description" content="Rutea es la app de reparto de Vinkko: escanea el QR del paquete, lee la etiqueta, arma la ruta más corta y lleva la caja con cada logística. Funciona sin señal.">
+<link rel="canonical" href="https://vinkko.com.ar/rutea/">
+<meta name="theme-color" content="#2A7DB5">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Vinkko">
+<meta property="og:locale" content="es_AR">
+<meta property="og:url" content="https://vinkko.com.ar/rutea/">
+<meta property="og:title" content="Rutea: escaneá, ruteá y cobrá sin planillas">
+<meta property="og:description" content="App de reparto: lee la etiqueta, arma la ruta más corta y lleva la caja con cada logística. Funciona sin señal.">
+<meta property="og:image" content="https://vinkko.com.ar/img/rutea/00-portada.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" type="image/png" sizes="32x32" href="../img/favicon-32.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@600;700&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "MobileApplication",
+  "name": "Rutea",
+  "url": "https://vinkko.com.ar/rutea/",
+  "description": "App de reparto para logística de última milla: escaneo del QR y lectura de la etiqueta, ruta optimizada, caja por logística y funcionamiento sin señal.",
+  "applicationCategory": "BusinessApplication",
+  "operatingSystem": "Android",
+  "inLanguage": "es",
+  "image": "https://vinkko.com.ar/img/rutea/00-portada.jpg",
+  "publisher": {"@type": "Organization", "name": "Vinkko", "url": "https://vinkko.com.ar/"}
+}
+</script>
+<style>
+  :root { --azul:#2A7DB5; --azul-claro:#E8F4FC; --verde:#3A9E6E; --verde-claro:#E6F5EE; --fondo:#F7FBFA; --sup:#FFFFFF; --texto:#1A2E2A; --suave:#4A6B60; --borde:#D4EBE0; --sombra:rgba(42,125,181,.12); color-scheme:light; }
+  [data-theme="dark"] { --azul:#6BB3E6; --azul-claro:#16283a; --verde:#5CC795; --verde-claro:#14302a; --fondo:#0f1a18; --sup:#16231f; --texto:#E6F0EC; --suave:#A7C2B8; --borde:#24372f; --sombra:rgba(0,0,0,.35); color-scheme:dark; }
+  * { box-sizing:border-box; margin:0; padding:0; }
+  body { font-family:'DM Sans',sans-serif; background:var(--fondo); color:var(--texto); line-height:1.6; }
+  a { color:var(--azul); }
+  img { max-width:100%; height:auto; display:block; }
+  .top { max-width:1080px; margin:0 auto; padding:18px 20px; display:flex; justify-content:space-between; align-items:center; gap:12px; flex-wrap:wrap; }
+  .top a { text-decoration:none; font-weight:500; }
+  .marca { display:flex; align-items:center; gap:8px; font-family:'Fraunces',serif; font-size:1.3rem; font-weight:700; color:var(--azul) !important; }
+  .marca span span { color:var(--verde); }
+  .marca img { height:34px; }
+  [data-theme="dark"] .marca img { background:#fff; border-radius:8px; padding:2px; }
+  .hero { max-width:1080px; margin:0 auto; padding:30px 20px 50px; display:grid; grid-template-columns:1fr 1.3fr; gap:40px; align-items:center; }
+  .badge { display:inline-block; background:var(--verde-claro); color:var(--verde); font-size:.82rem; font-weight:500; padding:.3rem .9rem; border-radius:50px; margin-bottom:14px; }
+  h1 { font-family:'Fraunces',serif; font-size:3rem; line-height:1.1; margin-bottom:14px; letter-spacing:-.5px; }
+  .hero p { color:var(--suave); margin-bottom:20px; font-weight:300; font-size:1.05rem; }
+  .acciones { display:flex; gap:10px; flex-wrap:wrap; }
+  .btn { display:inline-flex; align-items:center; background:var(--azul); color:#fff; font-weight:500; text-decoration:none; padding:.8rem 1.6rem; border-radius:50px; box-shadow:0 4px 20px var(--sombra); }
+  .btn:hover { background:var(--verde); }
+  .btn.sec { background:transparent; color:var(--azul); border:1.5px solid var(--azul); box-shadow:none; }
+  .hero-img { border-radius:14px; border:1px solid var(--borde); box-shadow:0 20px 60px var(--sombra); }
+  section { max-width:1080px; margin:0 auto; padding:40px 20px; }
+  h2 { font-family:'Fraunces',serif; font-size:1.7rem; margin-bottom:18px; }
+  .rasgos { display:grid; grid-template-columns:repeat(auto-fit,minmax(230px,1fr)); gap:14px; }
+  .rasgo { background:var(--sup); border:1px solid var(--borde); border-radius:14px; padding:18px; }
+  .rasgo b { display:block; color:var(--azul); margin-bottom:4px; }
+  .rasgo span { color:var(--suave); font-size:.95rem; font-weight:300; }
+  .galeria { display:grid; grid-template-columns:repeat(auto-fill,minmax(190px,1fr)); gap:14px; }
+  figure { background:var(--sup); border:1px solid var(--borde); border-radius:14px; overflow:hidden; }
+  figure img { width:100%; height:auto; }
+  figcaption { padding:10px 12px; font-size:.86rem; color:var(--suave); line-height:1.45; }
+  .nota { color:var(--suave); font-size:.88rem; margin-top:14px; }
+  footer { text-align:center; color:var(--suave); font-size:.88rem; padding:40px 20px 50px; border-top:1px solid var(--borde); margin-top:30px; }
+  @media (max-width:820px) { .hero { grid-template-columns:1fr; } h1 { font-size:2.3rem; } }
+  @media (max-width:440px) { .galeria { grid-template-columns:repeat(2,1fr); gap:10px; } figcaption { font-size:.8rem; } }
+</style>
+<script>
+  (function(){ try { var t = localStorage.getItem('vk-tema'); if (!t) t = matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'; document.documentElement.setAttribute('data-theme', t); } catch(e){} })();
+</script>
+</head>
+<body>
+<div class="top">
+  <a href="../" class="marca"><img src="../img/logo.webp" alt="Vinkko" width="39" height="34"><span>Vink<span>ko</span></span></a>
+  <a href="../#contacto">Contacto</a>
+</div>
+
+<main>
+<div class="hero">
+  <div>
+    <span class="badge">App de reparto · en prueba</span>
+    <h1>Rutea</h1>
+    <p>Una app para repartidores que trabajan con varias logísticas. Escaneás el QR del paquete, la cámara lee la etiqueta y lo ubica en el mapa. Arma el recorrido más corto y, a medida que entregás, lleva la cuenta de lo que te debe cada empresa.</p>
+    <p>Nació en la calle. Las direcciones iban en una app, el recorrido en otra, los pagos en el WhatsApp y las cuentas en un papel. El fin de semana no había forma clara de saber cuánto te debían. Rutea junta todo eso en el celular y funciona aunque no haya señal.</p>
+    <div class="acciones">
+      <a class="btn" href="https://wa.me/5491131579295?text=Hola%20Vinkko%2C%20quiero%20probar%20Rutea" target="_blank" rel="noopener">Quiero probarla</a>
+      <a class="btn sec" href="../">Volver a Vinkko</a>
+    </div>
+  </div>
+  <img class="hero-img" src="../img/rutea/00-portada.webp" alt="Rutea en tres celulares: la caja, los paquetes del día y el mapa con la ruta" width="1200" height="630">
+</div>
+
+<section>
+  <h2>Qué resuelve</h2>
+  <div class="rasgos">
+    <div class="rasgo"><b>Escanear y listo</b><span>QR y foto de la etiqueta en un solo paso. La app lee la dirección, el código postal, el destinatario y el teléfono, sin internet.</span></div>
+    <div class="rasgo"><b>La ruta más corta</b><span>Ordena las paradas por calles, con la hora estimada de cada entrega, y te lleva con Google Maps.</span></div>
+    <div class="rasgo"><b>Cuentas claras</b><span>Precio por logística, por tipo de envío y por zona. Arrastra saldos, registra pagos y cobros contra reembolso, y arma la liquidación para mandar por WhatsApp.</span></div>
+    <div class="rasgo"><b>Sin señal no se frena</b><span>Todo se guarda en el celular y se sube a la nube cuando vuelve internet. Cada repartidor tiene su cuenta y ve solo sus datos.</span></div>
+  </div>
+</section>
+
+<section>
+  <h2>Así se ve</h2>
+  <div class="galeria">
+    <figure><img src="../img/rutea/01-hoy-paquetes-del-dia.webp" alt="Pantalla Hoy con resumen del día, tiempo estimado de la ruta y lista de paquetes numerados" width="540" height="1199" loading="lazy"><figcaption>El día: pendientes, entregados, lo que llevás ganado y a qué hora terminás.</figcaption></figure>
+    <figure><img src="../img/rutea/02-mapa-ruta-optimizada.webp" alt="Mapa con la ruta optimizada por calles y las paradas numeradas" width="540" height="1199" loading="lazy"><figcaption>Ruta más corta por calles, con km y tiempo total en moto.</figcaption></figure>
+    <figure><img src="../img/rutea/04-escaner-qr-y-etiqueta.webp" alt="Cámara leyendo el QR de una etiqueta de envío" width="540" height="1199" loading="lazy"><figcaption>Escaneo del QR y lectura de la etiqueta en el mismo paso.</figcaption></figure>
+    <figure><img src="../img/rutea/05-paquete-zona-de-cobro.webp" alt="Ficha de paquete con logística, tipo de envío y zona de cobro detectada" width="540" height="1199" loading="lazy"><figcaption>La zona se detecta por la dirección y define cuánto paga la logística.</figcaption></figure>
+    <figure><img src="../img/rutea/07-caja-arqueo-por-logistica.webp" alt="Caja con lo que debe cada logística, saldo anterior y ganancia neta" width="540" height="1199" loading="lazy"><figcaption>La caja con cada logística: saldo que venía, lo generado y lo cobrado.</figcaption></figure>
+    <figure><img src="../img/rutea/08-registrar-pago.webp" alt="Formulario para registrar un pago recibido de una logística" width="540" height="1199" loading="lazy"><figcaption>Transferencias, depósitos o efectivo, y rendiciones de cobros.</figcaption></figure>
+    <figure><img src="../img/rutea/09-precios-por-zona.webp" alt="Configuración de precios por zona de una logística" width="540" height="1199" loading="lazy"><figcaption>Cada logística con sus propios precios por zona.</figcaption></figure>
+    <figure><img src="../img/rutea/11-ingreso-con-cuenta.webp" alt="Pantalla de ingreso con email y contraseña" width="540" height="1199" loading="lazy"><figcaption>Cuentas de usuario con los datos respaldados en la nube.</figcaption></figure>
+  </div>
+  <p class="nota">Las capturas usan datos de ejemplo: clientes, direcciones y logísticas inventadas.</p>
+</section>
+</main>
+
+<footer>© 2026 Vinkko · <a href="../">vinkko.com.ar</a> · Hecho en Argentina</footer>
+</body>
+</html>
